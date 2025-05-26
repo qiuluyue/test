@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>钛合金成本优化系统（网页版）</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 文件上传区 -->
+        <div class="upload-section">
+            <h2>数据上传</h2>
+            <input type="file" id="pureFile" accept=".csv">
+            <input type="file" id="alloyFile" accept=".csv">
+        </div>
+
+        <!-- 输入面板 -->
+        <div class="input-section">
+            <h2>合金成分输入（质量百分比）</h2>
+            <div id="elementInputs"></div>
+            <div class="ti-display">
+                <label>Ti含量：</label>
+                <span id="tiContent">100.0</span>%
+            </div>
+        </div>
+
+        <!-- 中间合金选择 -->
+        <div class="alloy-section">
+            <h2>选择中间合金</h2>
+            <div id="alloyCheckboxes"></div>
+        </div>
+
+        <!-- 计算按钮 -->
+        <button id="calculateBtn">开始优化计算</button>
+
+        <!-- 结果展示 -->
+        <div class="result-section">
+            <h2>优化结果</h2>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>材料</th>
+                        <th>用量(kg)</th>
+                        <th>单价(元/kg)</th>
+                        <th>成本(元)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
