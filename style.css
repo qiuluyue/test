@@ -1,0 +1,64 @@
+body {
+    font-family: '微软雅黑', sans-serif;
+    margin: 20px;
+    background: #f0f2f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.input-section, .alloy-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-group {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+#resultTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#resultTable th, #resultTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#resultTable th {
+    background: #2c3e50;
+    color: white;
+}
+
+button {
+    grid-column: 1 / -1;
+    padding: 15px 30px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #2980b9;
+}
